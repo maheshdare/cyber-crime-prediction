@@ -98,34 +98,16 @@ if page == "Dashboard":
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.metric(
-            "🎯 Organizations at Risk",
-            "1,247",
-            "+18% this month",
-            delta_color="off"
-        )
+        st.info("🎯 **Organizations at Risk**\n\n# 1,247\n\n+18% this month")
     
     with col2:
-        st.metric(
-            "⚠️ Critical (Score >90)",
-            "143",
-            "+12% increase",
-            delta_color="inverse"
-        )
+        st.warning("⚠️ **Critical (Score >90)**\n\n# 143\n\n+12% increase")
     
     with col3:
-        st.metric(
-            "📊 Prediction Accuracy",
-            "78%",
-            "+4% vs last quarter"
-        )
+        st.success("📊 **Prediction Accuracy**\n\n# 78%\n\n+4% vs last quarter")
     
     with col4:
-        st.metric(
-            "🔮 Emerging Threats",
-            "23 new patterns",
-            "Detected this month"
-        )
+        st.info("🔮 **Emerging Threats**\n\n# 23 new patterns\n\nDetected this month")
     
     st.markdown("---")
     
@@ -243,13 +225,13 @@ elif page == "Threat Trends":
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.metric("Avg Attack Sophistication", "7.8/10", "+12% YoY")
+        st.info("📈 **Avg Attack Sophistication**\n\n# 7.8/10\n\n+12% YoY")
     with col2:
-        st.metric("New Attack Vectors", "23", "+18% discovered")
+        st.warning("🆕 **New Attack Vectors**\n\n# 23\n\n+18% discovered")
     with col3:
-        st.metric("Time to Breach", "4.2 days", "↓ -28% faster")
+        st.error("⚡ **Time to Breach**\n\n# 4.2 days\n\n-28% faster")
     with col4:
-        st.metric("Active APT Groups", "18", "+5 new groups")
+        st.info("🔴 **Active APT Groups**\n\n# 18\n\n+5 new groups")
     
     st.markdown("---")
     
@@ -355,11 +337,11 @@ elif page == "Risk Analysis":
     st.markdown("### Confidence Metrics")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.metric("Prediction Confidence", "94%", "Very High")
+        st.success("✅ **Prediction Confidence**\n\n# 94%\n\nVery High")
     with col2:
-        st.metric("Model Agreement", "89%", "9/10 models agree")
+        st.info("🤝 **Model Agreement**\n\n# 89%\n\n9/10 models agree")
     with col3:
-        st.metric("Historical Precedent", "78%", "Similar cases")
+        st.warning("📊 **Historical Precedent**\n\n# 78%\n\nSimilar cases")
 
 # PAGE: PREVENTION GUIDE
 else:
