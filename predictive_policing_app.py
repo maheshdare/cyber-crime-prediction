@@ -69,7 +69,7 @@ def load_vulnerable_targets():
 
 @st.cache_data
 def load_trend_data():
-    months = pd.date_range(start='2023-01', end='2024-12', freq='M')
+    months = pd.date_range(start='2023-01', end='2024-12', freq='ME')
     data = {
         'Month': months,
         'Total Attacks': [142, 156, 178, 195, 212, 234, 251, 268, 287, 305, 328, 351, 378, 402, 428, 456],
