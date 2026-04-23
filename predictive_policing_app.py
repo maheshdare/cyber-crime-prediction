@@ -197,8 +197,18 @@ elif page == "Vulnerable Targets":
             """)
         
         with col2:
-            st.metric("Risk Score", row['Risk Score'])
-            st.metric("Probability", f"{row['Attack Probability %']}%")
+            st.markdown(f"""
+            <div style="background-color: #f0f2f6; padding: 15px; border-radius: 8px; text-align: center;">
+                <h3 style="margin: 0; color: #1f3a93;">{row['Risk Score']}</h3>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;">Risk Score</p>
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown(f"""
+            <div style="background-color: #f0f2f6; padding: 15px; border-radius: 8px; text-align: center; margin-top: 10px;">
+                <h3 style="margin: 0; color: #1f3a93;">{row['Attack Probability %']}%</h3>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;">Probability</p>
+            </div>
+            """, unsafe_allow_html=True)
         
         # Evidence
         with st.expander("📋 Detailed Evidence"):
